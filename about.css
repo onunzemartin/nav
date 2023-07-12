@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+   
+    padding-bottom: 3rem;
+    /* color: #5a5a5a; */
+    background-color: #d2d7d8 ;
+  }
+
+
+
+h4{
+    color: white;
+    font-size: 2em;
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px;
+    background-color: #02251e;
+    height: fit-content;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    /* flex-direction: row; */
+    
+}
+
+ul li{
+    margin-left: 20px;
+    position: relative;
+   
+}
+
+ul li::after{
+    content:'';
+    height:3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    bottom: -10px;
+    left:0;
+    transition: all 0.5s ease;
+}
+
+ul li:hover::after{
+    width: 100%;
+}
+
+
+.navvy a.icon {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+      /* RESPONSIVE CSS
+  -------------------------------------------------- */
+ 
+
+      @media screen and (max-width: 600px) {
+        
+        .navvy{
+           display: none;
+          }
+        .navvy a.icon {
+          float: right;
+          display: block;
+        }
+      }
+ 
+     
+  /* @media screen and (max-width: 600px) { */
+    .navvy.responsive {
+      position: relative;
+      display:block;
+    
+    }
+    .navvy.responsive a.icon {
+      position:absolute;
+      right: 0;
+      top: 0;
+    }
+    .navvy.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+   
+  /* } */
